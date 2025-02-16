@@ -107,11 +107,7 @@ This project aims to transform and analyze event data from Blinkist to generate 
      git clone https://github.com/afletunova/test-dbt-project.git
      cd blinkist_dbt_project
  ```
-2. Install dependences:
- ```bash
-     pip install -r requirements.txt
- ```
-3. Set up the dbt profile: 
+2. Set up the dbt profile: 
  ```yml
       blinkist_dbt_project:
         target: dev
@@ -124,7 +120,7 @@ This project aims to transform and analyze event data from Blinkist to generate 
             dbname: your_db
             schema: public_staging
  ```
-4. Run dbt models: 
+3. Run dbt models: 
  ```bash
      dbt run
  ```

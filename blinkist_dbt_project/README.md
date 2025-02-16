@@ -9,16 +9,12 @@ This project aims to transform and analyze event data from Blinkist to generate 
 
 ## Setup Instructions
 1. Clone the repository:
-    ```bash
-      git clone https://github.com/afletunova/test-dbt-project.git
-      cd blinkist_dbt_project
-    ```
-2. Install dependences:
-    ```bash
-      pip install -r requirements.txt
-    ```
-3. Set up the dbt profile: 
-    ```yml
+ ```bash
+     git clone https://github.com/afletunova/test-dbt-project.git
+     cd blinkist_dbt_project
+ ```
+2. Set up the dbt profile: 
+ ```yml
       blinkist_dbt_project:
         target: dev
         outputs:
@@ -29,11 +25,11 @@ This project aims to transform and analyze event data from Blinkist to generate 
             password: your_password
             dbname: your_db
             schema: public_staging
-    ```
-4. Run dbt models: 
-    ```bash
-      dbt run
-    ```
+ ```
+3. Run dbt models: 
+ ```bash
+     dbt run
+ ```
 
 ## Usage Instructions
 - To run all models:
