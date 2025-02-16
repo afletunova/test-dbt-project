@@ -1,15 +1,55 @@
-Welcome to your new dbt project!
+# Blinkist DBT Project
 
-### Using the starter project
+This project aims to transform and analyze event data from Blinkist to generate key metrics like DAU, MAU, and content completions. It loads raw event data from CSVs, processes them through dbt models, and produces actionable insights for business stakeholders.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Prerequisites
+- Python 3.12+
+- dbt (>= 1.9)
+- PostgreSQL (>= 17.3)
 
+## Setup Instructions
+1. Clone the repository:
+    ```bash
+      git clone https://github.com/afletunova/test-dbt-project.git
+      cd blinkist_dbt_project
+    ```
+2. Install dependences:
+    ```bash
+      pip install -r requirements.txt
+    ```
+3. Set up the dbt profile: 
+    ```yml
+      blinkist_dbt_project:
+        target: dev
+        outputs:
+          dev:
+            type: postgres
+            host: localhost
+            user: your_user
+            password: your_password
+            dbname: your_db
+            schema: public_staging
+    ```
+4. Run dbt models: 
+    ```bash
+      dbt run
+    ```
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Usage Instructions
+- To run all models:
+    ```bash
+      dbt run
+    ```
+- To run specific models:
+    ```bash
+      dbt run --models <model_name>
+    ```
+- To run tests
+    ```bash
+      dbt test
+    ```
+- To generate and serve docs
+    ```bash
+      dbt docs generate
+      dbt docs serve
+    ```
