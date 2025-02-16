@@ -1,4 +1,6 @@
-venv/
+dbt-venv/
 dbt_packages/
 target/
 .env/
+.DS_Store
+logs/
